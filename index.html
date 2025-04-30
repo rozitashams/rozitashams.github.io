@@ -3,10 +3,26 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="استدیو تخصصی تبلیغاتی محصولات آرایشی بهداشتی">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>استدیو Rozita Shams</title>
+  <meta name="description" content="استدیو تخصصی عکاسی آرایشی و بهداشتی رزیتا شمس">
+  <meta name="keywords" content="استدیو, عکاسی, آرایشی, بهداشتی, عطر, رژ لب, ضد آفتاب, محصولات">
+  <meta name="author" content="Rozita Shams">
+  <meta property="og:title" content="استدیو تخصصی عکاسی آرایشی و بهداشتی رزیتا شمس">
+  <meta property="og:description" content="استدیو تخصصی عکاسی آرایشی و بهداشتی رزیتا شمس، عطرها، آرایشی و بهداشتی">
+  <meta property="og:image" content="Logo.jpg">
+  <meta property="og:url" content="https://rozitashams.github.io">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="استدیو تخصصی عکاسی آرایشی و بهداشتی رزیتا شمس">
+  <meta name="twitter:description" content="استدیو تخصصی عکاسی آرایشی و بهداشتی رزیتا شمس">
+  <meta name="twitter:image" content="Logo.jpg">
+  <meta name="robots" content="index, follow">
+  <title>استدیو تخصصی عکاسی آرایشی و بهداشتی رزیتا شمس</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <!-- لینک های مورد نیاز برای Slick Slider -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
   <style>
     body {
       font-family: sans-serif;
@@ -25,6 +41,8 @@
 
     .logo {
       height: 60px;
+      object-fit: contain;
+      max-width: 100%;
     }
 
     img {
@@ -63,27 +81,102 @@
     h1 {
       font-size: 1.4em;
     }
+
+    .categories {
+      margin-bottom: 20px;
+    }
+
+    .categories button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .categories button:hover {
+      background-color: #45a049;
+    }
+
+    .category {
+      display: none;
+    }
+
+    .category img {
+      max-width: 400px;
+      display: block;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="Logo.jpg" alt="لوگوی استدیو Rozita Shams" class="logo">
-  <h1>استدیو تخصصی تبلیغاتی محصولات آرایشی بهداشتی</h1>
+  <img src="Logo.jpg" alt="لوگوی استدیو تخصصی عکاسی آرایشی و بهداشتی رزیتا شمس" class="logo">
+  <h1>استدیو تخصصی عکاسی آرایشی و بهداشتی رزیتا شمس</h1>
 </header>
 
-<!-- عکس‌ها -->
-<h2>عکس‌ها</h2>
-<img src="perfume6.jpg" alt="عطر">
-<img src="sun.jpg" alt="ضد آفتاب">
-<img src="20240204_165135.jpg" alt="نرم‌کننده">
-<img src="20240801_120509.jpg" alt="رژ لب">
+<!-- اسلاید تصاویر -->
+<div class="slider">
+  <img src="perfume6.jpg" alt="عطر Rozita Shams">
+  <img src="sun.jpg" alt="ضد آفتاب Rozita Shams">
+  <img src="20240204_165135.jpg" alt="نرم‌کننده Rozita Shams">
+  <img src="20240801_120509.jpg" alt="رژ لب Rozita Shams">
+</div>
+
+<!-- دسته‌بندی‌ها -->
+<div class="categories">
+  <button onclick="showCategory('perfumes')">عطرها</button>
+  <button onclick="showCategory('cosmetics')">آرایشی</button>
+  <button onclick="showCategory('healthcare')">بهداشتی</button>
+</div>
+
+<!-- عکس‌های هر دسته -->
+<div id="perfumes" class="category">
+  <img src="perfume6.jpg" alt="عطر Rozita Shams">
+</div>
+
+<div id="cosmetics" class="category" style="display:none;">
+  <img src="20240801_120509.jpg" alt="آرایشی Rozita Shams">
+</div>
+
+<div id="healthcare" class="category" style="display:none;">
+  <img src="sun.jpg" alt="ضد آفتاب Rozita Shams">
+  <img src="20240204_165135.jpg" alt="نرم‌کننده Rozita Shams">
+</div>
 
 <!-- دکمه‌های واتساپ و اینستاگرام -->
 <div class="social">
   <a href="https://wa.me/989121839844" target="_blank">واتساپ: 09121839844</a>
   <a href="https://www.instagram.com/rozita_shams_studio/" class="instagram" target="_blank">اینستاگرام</a>
 </div>
+
+<!-- اسکریپت برای Slick Slider -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: true
+    });
+  });
+
+  function showCategory(category) {
+    var categories = document.querySelectorAll('.category');
+    categories.forEach(function(category) {
+      category.style.display = 'none';
+    });
+
+    document.getElementById(category).style.display = 'block';
+  }
+</script>
 
 </body>
 </html>
