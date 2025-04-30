@@ -1,59 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="استدیو تخصصی تبلیغاتی محصولات آرایشی بهداشتی">
-  <meta name="keywords" content="عطر, آرایشی, بهداشتی, تبلیغات, استدیو, زیبایی">
-  <meta name="author" content="Rozita Shams">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>استدیو تبلیغاتی Rozita Shams</title>
+  <title>استدیو Rozita Shams</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
   <style>
     body {
       font-family: sans-serif;
       direction: rtl;
-      padding: 20px;
       background-color: #fdfdfd;
+      padding: 20px;
       margin-bottom: 160px;
     }
+
     header {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 30px;
     }
+
     .logo {
       height: 60px;
     }
-    h1 {
-      font-size: 1.5em;
-      margin: 10px;
-    }
-    h2 {
-      margin-top: 40px;
-      border-bottom: 2px solid #444;
-      padding-bottom: 5px;
-    }
-    .swiper {
+
+    img {
       width: 100%;
-      margin: 20px 0;
-    }
-    .swiper-slide {
-      text-align: center;
-    }
-    .swiper-slide img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
+      max-width: 400px;
+      margin: 10px 0;
       border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .caption {
-      margin-top: 5px;
-      font-size: 0.9em;
-      color: #444;
-    }
+
     .social {
       position: fixed;
       bottom: 20px;
@@ -63,6 +45,7 @@
       flex-direction: column;
       gap: 10px;
     }
+
     .social a {
       text-decoration: none;
       padding: 10px 15px;
@@ -72,8 +55,13 @@
       font-weight: bold;
       box-shadow: 0 0 8px rgba(0,0,0,0.2);
     }
+
     .instagram {
       background-color: #C13584;
+    }
+
+    h1 {
+      font-size: 1.4em;
     }
   </style>
 </head>
@@ -84,76 +72,18 @@
   <h1>استدیو تخصصی تبلیغاتی محصولات آرایشی بهداشتی</h1>
 </header>
 
-<!-- اسلایدر اصلی -->
-<div class="swiper main-slider">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="green2.jpg" alt="لاک سبز"><div class="caption">لاک سبز</div></div>
-    <div class="swiper-slide"><img src="perfume6.jpg" alt="عطر"><div class="caption">عطر</div></div>
-    <div class="swiper-slide"><img src="perfumeee.jpg" alt="عطر دیگر"><div class="caption">عطر دیگر</div></div>
-    <div class="swiper-slide"><img src="new.roj.jpg" alt="رژ"><div class="caption">رژ</div></div>
-    <div class="swiper-slide"><img src="20240801_120509.jpg" alt="رژ لب"><div class="caption">رژ لب</div></div>
-    <div class="swiper-slide"><img src="sun.jpg" alt="ضد آفتاب"><div class="caption">ضد آفتاب</div></div>
-    <div class="swiper-slide"><img src="ton.jpg" alt="تونر"><div class="caption">تونر</div></div>
-    <div class="swiper-slide"><img src="20240204_165135.jpg" alt="نرم‌کننده"><div class="caption">نرم‌کننده</div></div>
-  </div>
-</div>
+<!-- عکس‌ها -->
+<h2>عکس‌ها</h2>
+<img src="perfume6.jpg" alt="عطر">
+<img src="sun.jpg" alt="ضد آفتاب">
+<img src="20240204_165135.jpg" alt="نرم‌کننده">
+<img src="20240801_120509.jpg" alt="رژ لب">
 
-<!-- دسته‌بندی‌ها -->
-<h2>عطرها</h2>
-<div class="swiper perfume-slider">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="perfume6.jpg" alt="عطر"><div class="caption">عطر</div></div>
-    <div class="swiper-slide"><img src="perfumeee.jpg" alt="عطر دیگر"><div class="caption">عطر دیگر</div></div>
-  </div>
-</div>
-
-<h2>آرایشی</h2>
-<div class="swiper makeup-slider">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="green2.jpg" alt="لاک سبز"><div class="caption">لاک سبز</div></div>
-    <div class="swiper-slide"><img src="new.roj.jpg" alt="رژ"><div class="caption">رژ</div></div>
-    <div class="swiper-slide"><img src="20240801_120509.jpg" alt="رژ لب"><div class="caption">رژ لب</div></div>
-  </div>
-</div>
-
-<h2>بهداشتی</h2>
-<div class="swiper health-slider">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="sun.jpg" alt="ضد آفتاب"><div class="caption">ضد آفتاب</div></div>
-    <div class="swiper-slide"><img src="ton.jpg" alt="تونر"><div class="caption">تونر</div></div>
-    <div class="swiper-slide"><img src="20240204_165135.jpg" alt="نرم‌کننده"><div class="caption">نرم‌کننده</div></div>
-  </div>
-</div>
-
-<!-- فاصله برای جلوگیری از افتادن روی دکمه‌ها -->
-<div style="height: 150px;"></div>
-
-<!-- دکمه‌های شبکه‌های اجتماعی -->
+<!-- دکمه‌های واتساپ و اینستاگرام -->
 <div class="social">
   <a href="https://wa.me/989121839844" target="_blank">واتساپ: 09121839844</a>
-  <a href="https://www.instagram.com/rozita_shams_studio/" target="_blank" class="instagram">اینستاگرام</a>
+  <a href="https://www.instagram.com/rozita_shams_studio/" class="instagram" target="_blank">اینستاگرام</a>
 </div>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiperOptions = {
-    slidesPerView: 2,
-    spaceBetween: 10,
-    loop: true,
-    autoplay: {
-      delay: 3000,
-    },
-    breakpoints: {
-      768: { slidesPerView: 4 }
-    }
-  };
-
-  new Swiper('.main-slider', swiperOptions);
-  new Swiper('.perfume-slider', swiperOptions);
-  new Swiper('.makeup-slider', swiperOptions);
-  new Swiper('.health-slider', swiperOptions);
-</script>
 
 </body>
 </html>
