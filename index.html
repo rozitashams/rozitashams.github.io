@@ -28,13 +28,20 @@
         .header img {
             max-width: 100%;
             height: auto;
+            border: none;
+        }
+
+        /* استایل اسلاید */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin: 20px auto;
         }
 
         .carousel {
             display: flex;
-            overflow: hidden;
-            width: 100%;
-            margin: 0 auto;
+            transition: transform 0.5s ease-in-out;
         }
 
         .carousel img {
@@ -43,6 +50,20 @@
             object-fit: cover;
         }
 
+        /* دکمه‌های اجتماعی */
+        .social-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-buttons a {
+            margin: 10px;
+            font-size: 30px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* دسته‌بندی‌ها */
         .category-section {
             display: flex;
             justify-content: space-between;
@@ -62,27 +83,6 @@
         .category .carousel img {
             height: 200px;
         }
-
-        .social-buttons {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .social-buttons a {
-            margin: 10px;
-            font-size: 30px;
-        }
-
-        /* استایل اسلاید */
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .carousel-container img {
-            width: 100%;
-            height: auto;
-        }
     </style>
 </head>
 
@@ -92,9 +92,9 @@
         <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/Logo.jpg" alt="استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس">
     </div>
 
-    <!-- اسلاید اصلی -->
+    <!-- اسلاید اصلی بالای صفحه -->
     <div class="carousel-container">
-        <div class="carousel">
+        <div class="carousel" id="mainCarousel">
             <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/perfume6.jpg" alt="عطر Rozita Shams">
             <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/sun.jpg" alt="ضد آفتاب Rozita Shams">
             <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/20240204_165135.jpg" alt="نرم‌کننده Rozita Shams">
@@ -138,6 +138,33 @@
         <a href="https://wa.me/09121839844" target="_blank">واتساپ</a>
         <a href="https://www.instagram.com/rozita_shams_studio?igsh=ZzM0cXRidmV3eThu" target="_blank">اینستاگرام</a>
     </div>
+
+    <script>
+        // اسلاید اصلی (برای چرخش)
+        let mainCarousel = document.getElementById('mainCarousel');
+        let index = 0;
+
+        function slide() {
+            index++;
+            if (index >= 5) {
+                index = 0;
+            }
+            mainCarousel.style.transform = 'translateX(' + (-index * 100) + '%)';
+        }
+        setInterval(slide, 3000); // هر 3 ثانیه یک بار تغییر می‌کند
+
+        // اسلاید دسته‌ها
+        document.querySelectorAll('.category .carousel').forEach((carousel) => {
+            let catIndex = 0;
+            setInterval(() => {
+                catIndex++;
+                if (catIndex >= 2) {
+                    catIndex = 0;
+                }
+                carousel.style.transform = 'translateX(' + (-catIndex * 100) + '%)';
+            }, 3000);
+        });
+    </script>
 </body>
 
 </html>
