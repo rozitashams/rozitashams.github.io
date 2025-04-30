@@ -41,9 +41,10 @@
 
     .logo {
       height: 80px;
+      width: auto;
       object-fit: contain;
-      max-width: 100%;
       border-radius: 10px;
+      border: none;
     }
 
     img {
@@ -141,19 +142,25 @@
 
 <!-- عکس‌های هر دسته -->
 <div id="perfumes" class="category">
-  <img src="perfume6.jpg" alt="عطر Rozita Shams">
-  <img src="perfumeee.jpg" alt="عطر Rozita Shams">
+  <div class="slider">
+    <img src="perfume6.jpg" alt="عطر Rozita Shams">
+    <img src="perfumeee.jpg" alt="عطر Rozita Shams">
+  </div>
 </div>
 
 <div id="cosmetics" class="category" style="display:none;">
-  <img src="20240801_120509.jpg" alt="آرایشی Rozita Shams">
+  <div class="slider">
+    <img src="new.roj.jpg" alt="رژ لب Rozita Shams">
+  </div>
 </div>
 
 <div id="healthcare" class="category" style="display:none;">
-  <img src="sun.jpg" alt="ضد آفتاب Rozita Shams">
-  <img src="20240204_165135.jpg" alt="نرم‌کننده Rozita Shams">
-  <img src="ton.jpg" alt="تونر Rozita Shams">
-  <img src="new.roj.jpg" alt="رژ لب Rozita Shams">
+  <div class="slider">
+    <img src="sun.jpg" alt="ضد آفتاب Rozita Shams">
+    <img src="20240204_165135.jpg" alt="نرم‌کننده Rozita Shams">
+    <img src="ton.jpg" alt="تونر Rozita Shams">
+    <img src="20240801_120509.jpg" alt="رژ لب Rozita Shams">
+  </div>
 </div>
 
 <!-- دکمه‌های واتساپ و اینستاگرام -->
@@ -167,6 +174,7 @@
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
   $(document).ready(function(){
+    // اسلاید افقی در بالای صفحه
     $('.slider').slick({
       infinite: true,
       slidesToShow: 1,
