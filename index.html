@@ -1,201 +1,143 @@
 
 <!DOCTYPE html>
 <html lang="fa">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس">
-  <meta name="keywords" content="استدیو, عکاسی, آرایشی, بهداشتی, عطر, رژ لب, ضد آفتاب, محصولات">
-  <meta name="author" content="Rozita Shams">
-  <meta property="og:title" content="استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس">
-  <meta property="og:description" content="استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس، عطرها، آرایشی و بهداشتی">
-  <meta property="og:image" content="Logo.jpg">
-  <meta property="og:url" content="https://rozitashams.github.io">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس">
-  <meta name="twitter:description" content="استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس">
-  <meta name="twitter:image" content="Logo.jpg">
-  <meta name="robots" content="index, follow">
-  <title>استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس">
+    <meta name="keywords" content="استدیو, عکاسی, آرایشی, بهداشتی, رزیتا شمس, عطر, رژ, ضد آفتاب">
+    <meta name="author" content="Rozita Shams">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="https://github.com/rozitashams/rozitashams.github.io/raw/main/favicon.ico">
+    <title>استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس</title>
+    <style>
+        /* تنظیمات عمومی */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-  <!-- لینک های مورد نیاز برای Slick Slider -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
 
-  <style>
-    body {
-      font-family: sans-serif;
-      direction: rtl;
-      background-color: #fdfdfd;
-      padding: 20px;
-      margin-bottom: 160px;
-    }
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
 
-    header {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 30px;
-    }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            margin: 0 auto;
+        }
 
-    .logo {
-      height: 80px;
-      width: auto;
-      object-fit: contain;
-      border-radius: 10px;
-      border: none;
-    }
+        .carousel img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
 
-    img {
-      width: 100%;
-      max-width: 400px;
-      margin: 10px 0;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+        .category-section {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
 
-    .social {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 9999;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+        .category {
+            flex: 1;
+            margin: 0 10px;
+            text-align: center;
+        }
 
-    .social a {
-      text-decoration: none;
-      padding: 10px 15px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 8px;
-      font-weight: bold;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
-    }
+        .category h2 {
+            margin-bottom: 10px;
+        }
 
-    .instagram {
-      background-color: #C13584;
-    }
+        .category .carousel img {
+            height: 200px;
+        }
 
-    h1 {
-      font-size: 1.4em;
-    }
+        .social-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
 
-    .categories {
-      margin-bottom: 20px;
-    }
+        .social-buttons a {
+            margin: 10px;
+            font-size: 30px;
+        }
 
-    .categories button {
-      padding: 10px 15px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      margin-right: 10px;
-      cursor: pointer;
-    }
+        /* استایل اسلاید */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
 
-    .categories button:hover {
-      background-color: #45a049;
-    }
-
-    .category {
-      display: none;
-    }
-
-    .category img {
-      max-width: 400px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .slider img {
-      border-radius: 10px;
-    }
-
-  </style>
+        .carousel-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
+
 <body>
+    <!-- لوگو -->
+    <div class="header">
+        <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/Logo.jpg" alt="استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس">
+    </div>
 
-<header>
-  <img src="Logo.jpg" alt="استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس" class="logo">
-  <h1>استدیو تخصصی عکاسی محصولات آرایشی و بهداشتی رزیتا شمس</h1>
-</header>
+    <!-- اسلاید اصلی -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/perfume6.jpg" alt="عطر Rozita Shams">
+            <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/sun.jpg" alt="ضد آفتاب Rozita Shams">
+            <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/20240204_165135.jpg" alt="نرم‌کننده Rozita Shams">
+            <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/20240801_120509.jpg" alt="رژ لب Rozita Shams">
+            <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/green2.jpg" alt="لاک Rozita Shams">
+        </div>
+    </div>
 
-<!-- اسلاید تصاویر بالای صفحه -->
-<div class="slider">
-  <img src="perfume6.jpg" alt="عطر Rozita Shams">
-  <img src="sun.jpg" alt="ضد آفتاب Rozita Shams">
-  <img src="20240204_165135.jpg" alt="نرم‌کننده Rozita Shams">
-  <img src="20240801_120509.jpg" alt="رژ لب Rozita Shams">
-  <img src="green2.jpg" alt="لاک Rozita Shams">
-</div>
+    <!-- دسته‌بندی‌ها -->
+    <div class="category-section">
+        <!-- عطرها -->
+        <div class="category">
+            <h2>عطرها</h2>
+            <div class="carousel">
+                <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/perfume6.jpg" alt="عطر Rozita Shams">
+                <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/perfumeee.jpg" alt="عطر Rozita Shams">
+            </div>
+        </div>
 
-<!-- دسته‌بندی‌ها -->
-<div class="categories">
-  <button onclick="showCategory('perfumes')">عطرها</button>
-  <button onclick="showCategory('cosmetics')">آرایشی</button>
-  <button onclick="showCategory('healthcare')">بهداشتی</button>
-</div>
+        <!-- آرایشی -->
+        <div class="category">
+            <h2>آرایشی</h2>
+            <div class="carousel">
+                <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/new.roj.jpg" alt="رژ لب Rozita Shams">
+            </div>
+        </div>
 
-<!-- عکس‌های هر دسته -->
-<div id="perfumes" class="category">
-  <div class="slider">
-    <img src="perfume6.jpg" alt="عطر Rozita Shams">
-    <img src="perfumeee.jpg" alt="عطر Rozita Shams">
-  </div>
-</div>
+        <!-- بهداشتی -->
+        <div class="category">
+            <h2>بهداشتی</h2>
+            <div class="carousel">
+                <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/sun.jpg" alt="ضد آفتاب Rozita Shams">
+                <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/ton.jpg" alt="تونر Rozita Shams">
+                <img src="https://github.com/rozitashams/rozitashams.github.io/raw/main/20240204_165135.jpg" alt="نرم‌کننده Rozita Shams">
+            </div>
+        </div>
+    </div>
 
-<div id="cosmetics" class="category" style="display:none;">
-  <div class="slider">
-    <img src="new.roj.jpg" alt="رژ لب Rozita Shams">
-    <img src="green2.jpg" alt="لاک Rozita Shams">
-  </div>
-</div>
-
-<div id="healthcare" class="category" style="display:none;">
-  <div class="slider">
-    <img src="sun.jpg" alt="ضد آفتاب Rozita Shams">
-    <img src="20240204_165135.jpg" alt="نرم‌کننده Rozita Shams">
-    <img src="ton.jpg" alt="تونر Rozita Shams">
-    <img src="20240801_120509.jpg" alt="رژ لب Rozita Shams">
-  </div>
-</div>
-
-<!-- دکمه‌های واتساپ و اینستاگرام -->
-<div class="social">
-  <a href="https://wa.me/989121839844" target="_blank">واتساپ: 09121839844</a>
-  <a href="https://www.instagram.com/rozita_shams_studio/" class="instagram" target="_blank">اینستاگرام</a>
-</div>
-
-<!-- اسکریپت برای Slick Slider -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-  $(document).ready(function(){
-    // اسلاید افقی در بالای صفحه
-    $('.slider').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      arrows: true
-    });
-  });
-
-  function showCategory(category) {
-    var categories = document.querySelectorAll('.category');
-    categories.forEach(function(category) {
-      category.style.display = 'none';
-    });
-
-    document.getElementById(category).style.display = 'block';
-  }
-</script>
-
+    <!-- دکمه‌های اجتماعی -->
+    <div class="social-buttons">
+        <a href="https://wa.me/09121839844" target="_blank">واتساپ</a>
+        <a href="https://www.instagram.com/rozita_shams_studio?igsh=ZzM0cXRidmV3eThu" target="_blank">اینستاگرام</a>
+    </div>
 </body>
+
 </html>
