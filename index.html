@@ -4,34 +4,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>استودیو تخصصی رزیتا شمس - عکاسی تبلیغات و محصول</title>
-  <meta name="description" content="استودیو تخصصی رزیتا شمس - عکاسی حرفه‌ای از محصولات آرایشی، عطر و بهداشتی با نورپردازی تبلیغاتی و پس‌زمینه‌های خاص." />
+  <title>استودیو رزیتا شمس - عکاسی تبلیغاتی محصول و مواد غذایی</title>
+
+  <!-- SEO -->
+  <meta name="description" content="استودیو رزیتا شمس، عکاسی تبلیغاتی از محصولات آرایشی، بهداشتی و مواد غذایی با نورپردازی حرفه‌ای." />
   <meta name="google-site-verification" content="UGibxzx_Jz8SNy6TRpiqblyPfqqkTTf9fAdJ_1KkNa8" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="استودیو رزیتا شمس - عکاسی تبلیغاتی" />
+  <meta property="og:description" content="عکاسی تخصصی محصولات با نورپردازی تبلیغاتی. آرایشی، بهداشتی، مواد غذایی." />
+  <meta property="og:image" content="https://rozitashams.github.io/cover.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rozitashams.github.io/" />
+
   <style>
     body {
       font-family: sans-serif;
       background-color: #f8f0e3;
       text-align: center;
       direction: rtl;
-      padding: 20px;
       color: #333;
+      padding: 20px;
     }
+
     h1 {
       font-size: 28px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
-    h2 {
-      font-size: 22px;
-      margin-top: 30px;
-      color: #874d4d;
+
+    .slideshow {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      position: relative;
     }
+
+    .slideshow img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
     .images {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      margin-top: 10px;
+      margin-top: 30px;
     }
+
     .images img {
       width: 220px;
       height: 220px;
@@ -39,9 +61,11 @@
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+
     .social-buttons {
       margin-top: 40px;
     }
+
     .social-buttons a {
       display: inline-block;
       margin: 10px;
@@ -52,30 +76,55 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     .social-buttons a.instagram {
       background-color: #e1306c;
     }
   </style>
+
+  <script>
+    let index = 0;
+    const images = [
+      "green2.jpg",
+      "new.roj.jpg",
+      "perfumeee.jpg",
+      "perfume6.jpg",
+      "sun.jpg",
+      "ton.jpg",
+      "2024.jpg",
+      "2028.jpg"
+    ];
+
+    function showSlide() {
+      const img = document.getElementById("slide-img");
+      img.src = images[index];
+      index = (index + 1) % images.length;
+    }
+
+    window.onload = function () {
+      showSlide();
+      setInterval(showSlide, 3000); // هر 3 ثانیه عکس عوض می‌شود
+    };
+  </script>
 </head>
 <body>
-  <h1>استودیو تخصصی رزیتا شمس</h1>
-  <p>عکاسی تبلیغات و محصول با نورپردازی حرفه‌ای</p>
+  <h1>استودیو رزیتا شمس</h1>
+  <p>عکاسی تبلیغاتی حرفه‌ای محصولات آرایشی، بهداشتی و غذایی</p>
 
-  <h2>محصولات آرایشی</h2>
-  <div class="images">
-    <img src="green2.jpg" alt="عکس حرفه‌ای از لوازم آرایشی" />
-    <img src="new.roj.jpg" alt="عکاسی تبلیغاتی رژ لب" />
+  <div class="slideshow">
+    <img id="slide-img" src="" alt="نمونه عکس تبلیغاتی" />
   </div>
 
-  <h2>عطرها</h2>
+  <h2>نمونه‌کارها</h2>
   <div class="images">
-    <img src="perfumeee.jpg" alt="عکاسی تبلیغاتی از عطر زنانه" />
-    <img src="perfume6.jpg" alt="عکاسی حرفه‌ای از عطر مردانه" />
-  </div>
-
-  <h2>محصولات بهداشتی</h2>
-  <div class="images">
-    <img src="sun.jpg" alt="عکاسی از محصولات بهداشتی" />
+    <img src="green2.jpg" alt="عکاسی از لاک ناخن در زمینه فانتزی" />
+    <img src="new.roj.jpg" alt="عکاسی تبلیغاتی رژ مایع و مداد لب" />
+    <img src="perfumeee.jpg" alt="عطر زنانه در نورپردازی حرفه‌ای" />
+    <img src="perfume6.jpg" alt="عطر مردانه در زمینه تیره تبلیغاتی" />
+    <img src="sun.jpg" alt="عکس از محصولات بهداشتی پوست" />
+    <img src="ton.jpg" alt="عکاسی بهداشتی با رنگ‌های ملایم" />
+    <img src="2024.jpg" alt="محصول بهداشتی با نورپردازی استودیویی" />
+    <img src="2028.jpg" alt="رژ لب تبلیغاتی با نور ملایم" />
   </div>
 
   <div class="social-buttons">
