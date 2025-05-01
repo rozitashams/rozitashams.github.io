@@ -201,4 +201,18 @@
       loop: true,
       autoplay: {
         delay: 3000,
-        disableOn
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    };
+
+    new Swiper('.main-swiper', swiperOptions);
+    new Swiper('.perfume-swiper', swiperOptions);
+    new Swiper('.cosmetics-swiper', swiperOptions);
+    new Swiper('.health-swiper', swiperOptions);
+  </script>
+</body>
+</html>
