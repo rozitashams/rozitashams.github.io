@@ -1,161 +1,209 @@
 
-<!DOCTYPE html>
-<html lang="fa">
-
+<!DOCTYPE html><html lang="fa">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="استدیو تخصصی تبلیغاتی و عکاسی محصولات آرایشی و بهداشتی رزیتا شمس">
-  <meta name="keywords" content="عکاسی, استدیو, تبلیغات, آرایشی, بهداشتی, عطر, رژ, ضدآفتاب, رزیتا شمس">
-  <meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="کد تأیید گوگل اینجا در صورت نیاز">
-  <link rel="icon" href="https://rozitashams.github.io/favicon.ico" type="image/x-icon">
-  <title>استدیو تبلیغاتی رزیتا شمس</title>
-
+  <meta name="description" content="استدیو تخصصی عکاسی تبلیغاتی محصولات آرایشی و بهداشتی - عکاسی حرفه‌ای از عطر، لوازم آرایش و محصولات مراقبت پوست و مو">
+  <meta name="keywords" content="عکاسی تبلیغاتی, عکاسی محصولات, عکاسی لوازم آرایشی, استدیو عکاسی, Rozita Shams">
+  <meta name="author" content="Rozita Shams Studio">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>استدیو تخصصی عکاسی تبلیغاتی محصولات آرایشی و بهداشتی</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      font-family: sans-serif;
-      background-color: #fff;
+      background-color: #f8f4f1;
       direction: rtl;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 1rem;
+    }
+    header img {
+      max-height: 80px;
+      height: auto;
+    }
+    h1 {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      padding: 0 1rem;
+      font-family: sans-serif;
+    }
+    section {
+      margin: 1rem;
+    }
+    .swiper {
+      width: 100%;
+      height: 50vw;
+      max-height: 300px;
+      margin: auto;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .category {
+      margin: 2rem auto;
+      max-width: 95%;
       text-align: center;
     }
-
-    header {
-      background: #fff;
-      padding: 10px;
-    }
-
-    header img {
-      height: 100px;
-      border: none;
-    }
-
-    h1 {
-      font-size: 20px;
-      margin-top: 10px;
-    }
-
-    .carousel-container {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      margin: 20px 0;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
-    .carousel-track img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      object-fit: cover;
-      margin: 0 5px;
-    }
-
-    .category {
-      margin: 40px 0;
-    }
-
     .category h2 {
-      margin-bottom: 10px;
-      font-size: 18px;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
     }
-
-    .social-buttons {
-      margin: 40px 0 20px;
+    .category .swiper {
+      height: 50vw;
+      max-height: 250px;
     }
-
-    .social-buttons a {
-      margin: 0 10px;
-      display: inline-block;
+    .about {
+      background-color: #eae3dc;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 95%;
+      border-radius: 12px;
+      font-size: 1rem;
+      line-height: 1.8;
     }
-
-    .social-buttons img {
-      width: 40px;
-      height: 40px;
+    .about h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-align: center;
     }
-
+    .contact {
+      background-color: #f3ede7;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 95%;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .contact p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem auto;
+      flex-wrap: wrap;
+    }
+    .social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.2rem;
+      border-radius: 12px;
+      background: #e0d6cd;
+      text-decoration: none;
+      color: #000;
+      font-size: 1rem;
+      min-width: 130px;
+    }
+    .social img {
+      width: 24px;
+      height: 24px;
+      margin-left: 0.5rem;
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1rem;
+      }
+      .category .swiper {
+        height: 55vw;
+      }
+      .swiper-slide img {
+        border-radius: 8px;
+      }
+      .category h2 {
+        font-size: 1.2rem;
+      }
+      .about, .contact {
+        font-size: 0.95rem;
+        padding: 1.5rem;
+      }
+    }
   </style>
 </head>
-
 <body>
-
-  <!-- لوگو و عنوان -->
   <header>
-    <img src="https://rozitashams.github.io/Logo.jpg" alt="لوگو استدیو رزیتا شمس">
-    <h1>استدیو تخصصی تبلیغاتی و عکاسی محصولات آرایشی و بهداشتی رزیتا شمس</h1>
-  </header>
-
-  <!-- اسلاید اصلی -->
-  <div class="carousel-container">
-    <div class="carousel-track" id="main-carousel">
-      <img src="https://rozitashams.github.io/perfume6.jpg" alt="عطر">
-      <img src="https://rozitashams.github.io/perfumeee.jpg" alt="عطر دوم">
-      <img src="https://rozitashams.github.io/sun.jpg" alt="ضدآفتاب">
-      <img src="https://rozitashams.github.io/ton.jpg" alt="تونر">
-      <img src="https://rozitashams.github.io/20240204_165135.jpg" alt="نرم کننده مو">
-      <img src="https://rozitashams.github.io/new.roj.jpg" alt="رژ لب">
-      <img src="https://rozitashams.github.io/20240801_120509.jpg" alt="برق لب">
-      <img src="https://rozitashams.github.io/green2.jpg" alt="لاک">
+    <img src="Logo.jpg" alt="لوگوی استدیو Rozita Shams">
+    <h1>استدیو تخصصی عکاسی تبلیغاتی محصولات آرایشی و بهداشتی</h1>
+  </header>  <section>
+    <div class="swiper main-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="slide1.jpg" alt="نمونه عکاسی 1"></div>
+        <div class="swiper-slide"><img src="slide2.jpg" alt="نمونه عکاسی 2"></div>
+        <div class="swiper-slide"><img src="slide3.jpg" alt="نمونه عکاسی 3"></div>
+      </div>
     </div>
-  </div>
-
-  <!-- دسته بندی‌ها -->
-  <div class="category">
-    <h2>عطرها</h2>
-    <div class="carousel-track">
-      <img src="https://rozitashams.github.io/perfume6.jpg" alt="عطر">
-      <img src="https://rozitashams.github.io/perfumeee.jpg" alt="عطر دیگر">
+  </section>  <div class="category">
+    <h2>Perfume</h2>
+    <div class="swiper perfume-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="perfume6.jpg" alt="عطر شماره ۱"></div>
+        <div class="swiper-slide"><img src="perfumeee.jpg" alt="عطر شماره ۲"></div>
+      </div>
     </div>
-  </div>
-
-  <div class="category">
-    <h2>آرایشی</h2>
-    <div class="carousel-track">
-      <img src="https://rozitashams.github.io/new.roj.jpg" alt="رژ لب">
-      <img src="https://rozitashams.github.io/20240801_120509.jpg" alt="برق لب">
-      <img src="https://rozitashams.github.io/green2.jpg" alt="لاک">
+  </div>  <div class="category">
+    <h2>Cosmetics</h2>
+    <div class="swiper cosmetics-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="green2.jpg" alt="لاک سبز"></div>
+        <div class="swiper-slide"><img src="nailpolish.jpg" alt="لاک ناخن"></div>
+        <div class="swiper-slide"><img src="new.roj.jpg" alt="برق لب جدید"></div>
+        <div class="swiper-slide"><img src="20240801_120509.jpg" alt="برق لب"></div>
+        <div class="swiper-slide"><img src="mascara.jpg" alt="ریمل"></div>
+      </div>
     </div>
-  </div>
-
-  <div class="category">
-    <h2>بهداشتی</h2>
-    <div class="carousel-track">
-      <img src="https://rozitashams.github.io/sun.jpg" alt="ضد آفتاب">
-      <img src="https://rozitashams.github.io/ton.jpg" alt="تونر">
-      <img src="https://rozitashams.github.io/20240204_165135.jpg" alt="نرم کننده">
+  </div>  <div class="category">
+    <h2>Health Care</h2>
+    <div class="swiper health-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="sun.jpg" alt="ضد آفتاب"></div>
+        <div class="swiper-slide"><img src="ton.jpg" alt="تونر پوست"></div>
+        <div class="swiper-slide"><img src="20240204_165135.jpg" alt="نرم کننده مو"></div>
+        <div class="swiper-slide"><img src="foam.jpg" alt="فوم شستشوی صورت"></div>
+      </div>
     </div>
-  </div>
-
-  <!-- دکمه‌های اجتماعی -->
-  <div class="social-buttons">
+  </div>  <div class="about">
+    <h2>درباره من</h2>
+    <p>من رزیتا شمس هستم که تمام دوره‌های عکاسی و نورپردازی حرفه‌ای را گذرانده‌ام و با برندهای مختلفی همکاری کرده‌ام. کارم را از سال ۱۴۰۰ آغاز کرده‌ام و عاشق عکاسی هستم. با نورپردازی، به محصولات روح می‌بخشم و زیبایی واقعی آن‌ها را به تصویر می‌کشم.</p>
+  </div>  <div class="contact">
+    <h2>تماس با من</h2>
+    <p>ایمیل: <a href="mailto:rozitashams1@gmail.com">rozitashams1@gmail.com</a></p>
+    <p>واتساپ: <a href="https://wa.me/989121839844">09121839844</a></p>
+    <p>اینستاگرام: <a href="https://www.instagram.com/rozita_shams_studio?igsh=ZzM0cXRidmV3eThu" target="_blank">@rozita_shams_studio</a></p>
+  </div>  <div class="social">
     <a href="https://wa.me/989121839844" target="_blank">
-      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="واتساپ">
+      <img src="whatsapp-icon.png" alt="آیکون واتساپ">واتساپ
     </a>
     <a href="https://www.instagram.com/rozita_shams_studio?igsh=ZzM0cXRidmV3eThu" target="_blank">
-      <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="اینستاگرام">
+      <img src="instagram-icon.png" alt="آیکون اینستاگرام">اینستاگرام
     </a>
-  </div>
-
-  <script>
-    const carousel = document.getElementById('main-carousel');
-    let scrollAmount = 0;
-    setInterval(() => {
-      scrollAmount += 420;
-      if (scrollAmount >= carousel.scrollWidth) {
-        scrollAmount = 0;
-      }
-      carousel.scrollTo({
-        left: scrollAmount,
-        behavior: 'smooth'
-      });
-    }, 3000);
-  </script>
-
-</body>
-
+  </div>  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  <script>
+    const swiperOptions = {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    };
+    new Swiper('.main-swiper', swiperOptions);
+    new Swiper('.perfume-swiper', swiperOptions);
+    new Swiper('.cosmetics-swiper', swiperOptions);
+    new Swiper('.health-swiper', swiperOptions);
+  </script></body>
 </html>
