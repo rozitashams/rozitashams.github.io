@@ -1,4 +1,4 @@
-
+<!-- نسخه اصلاح‌شده سایت شما -->
 <!DOCTYPE html>
 <html lang="fa">
 <head>
@@ -9,13 +9,10 @@
   <meta name="author" content="Rozita Shams Studio">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>استدیو تخصصی عکاسی تبلیغاتی محصولات آرایشی و بهداشتی</title>
-  
-  <!-- افزودن لینک به Swiper برای اسلایدر -->
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  
-  <!-- افزودن فونت Poppins از گوگل فونت -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -140,6 +137,7 @@
         <div class="swiper-slide"><img src="slide2.jpg" alt="نمونه عکاسی 2"></div>
         <div class="swiper-slide"><img src="slide3.jpg" alt="نمونه عکاسی 3"></div>
         <div class="swiper-slide"><img src="slide4.jpg" alt="نمونه عکاسی 4"></div>
+        <div class="swiper-slide"><img src="slide5.jpg" alt="نمونه عکاسی 5"></div> <!-- اضافه شده -->
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -176,17 +174,16 @@
         <div class="swiper-slide"><img src="ton.jpg" alt="تونر پوست"></div>
         <div class="swiper-slide"><img src="20240204_165135.jpg" alt="نرم کننده مو"></div>
         <div class="swiper-slide"><img src="foam.jpg" alt="فوم شستشوی صورت"></div>
+        <div class="swiper-slide"><img src="serum-1.jpg" alt="سرم ویتامین سی"></div> <!-- اضافه شده -->
       </div>
     </div>
   </div>
 
-  <!-- بخش درباره من -->
   <div class="about">
     <h2>درباره من</h2>
     <p>من رزیتا شمس هستم که تمام دوره‌های عکاسی و نورپردازی حرفه‌ای را گذرانده‌ام و با برندهای مختلفی همکاری کرده‌ام. کارم را از سال ۱۴۰۰ آغاز کرده‌ام و عاشق عکاسی هستم. با نورپردازی، به محصولات روح می‌بخشم و زیبایی واقعی آن‌ها را به تصویر می‌کشم.</p>
   </div>
 
-  <!-- بخش تماس با من -->
   <div class="contact">
     <h2>تماس با من</h2>
     <p>ایمیل: <a href="mailto:rozitashams1@gmail.com">rozitashams1@gmail.com</a></p>
@@ -194,7 +191,6 @@
     <p>اینستاگرام: <a href="https://www.instagram.com/rozita_shams_studio?igsh=ZzM0cXRidmV3eThu" target="_blank">@rozita_shams_studio</a></p>
   </div>
 
-  <!-- بخش شبکه‌های اجتماعی -->
   <div class="social">
     <a href="https://wa.me/989121839844" target="_blank">
       <img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png" alt="آیکون واتساپ">واتساپ
@@ -209,7 +205,7 @@
     const swiperOptions = {
       loop: true,
       autoplay: {
-        delay: 3000,
+        delay: 6000, // آهسته‌تر شد (۶ ثانیه)
         disableOnInteraction: false
       },
       pagination: {
